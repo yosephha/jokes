@@ -31,9 +31,13 @@ class LogInForm extends React.Component {
 					/>
 				<br/>
 
+        <input type="submit"
+          value='LOGIN'
+          className="login"
+        />
       </div>
     );
   }
 }
 
-export default withRouter(LogInForm);
+export default LogInForm;
