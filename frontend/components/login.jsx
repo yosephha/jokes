@@ -33,7 +33,6 @@ class LogInForm extends React.Component {
 
         <input type="submit"
           value='LOGIN'
-          className="login"
         />
       </div>
     );
