@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
 import JokesIndex from './jokes_index';
+import {fetchCategories, queryJokes} from '../actions/query_action.js';
 
 const mapStateToProps = state => ({
-  // jokes: state.jokes
+  categories: state.categories,
+  jokes: state.jokes
 });
 
-const mapDispatchToProps = state => ({
-  fetchCategories: '',
-  query: ''
+const mapDispatchToProps = dispatch => ({
+  fetchCategories: () => dispatch(fetchCategories()),
+  queryJokes: (query) => dispatch(queryJokes(query))
 });
 
 export default connect(

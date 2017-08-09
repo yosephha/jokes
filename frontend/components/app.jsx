@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LogInForm from './loginContainer';
-import JokesIndex from './jokes_index';
+import JokesIndex from './jokes_index_container';
 import { ProtectedRoute } from '../util/route';
 const App = () => {
   return (
