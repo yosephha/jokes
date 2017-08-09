@@ -1,1 +1,1 @@
-JOKES API
+JOKES
