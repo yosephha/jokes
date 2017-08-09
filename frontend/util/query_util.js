@@ -1,9 +1,8 @@
 export const queryAPI = (query) => {
-  const url = "https://api.chucknorris.io/jokes/search?query=" + query
   return (
     $.ajax({
       method: 'GET',
-      url: url
+          url: `https://api.chucknorris.io/jokes/search?query=${query}`
     })
   );
 }
