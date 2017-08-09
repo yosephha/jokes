@@ -28,13 +28,10 @@ class LogInForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     this.validateInput();
-    // debugger
     if(this.validUserName && this.validPassword){
       this.props.login();
       this.props.history.push('/');
     } else {
-        // debugger
-        // this.setState(() => {error: true});
         this.setState({
           error: true
         });
@@ -49,7 +46,6 @@ class LogInForm extends React.Component {
   }
 
   render(){
-    // debugger
     let usernameMissing = "";
     let passwordMissing = "";
 

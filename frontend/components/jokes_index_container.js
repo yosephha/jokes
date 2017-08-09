@@ -5,7 +5,12 @@ const mapStateToProps = state => ({
   // jokes: state.jokes
 });
 
+const mapDispatchToProps = state => ({
+  fetchCategories: '',
+  query: ''
+});
+
 export default connect(
-  null,
-  null
+  mapStateToProps,
+  mapDispatchToProps
 )(JokesIndex);
