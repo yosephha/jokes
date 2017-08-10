@@ -8,7 +8,7 @@ const JokeItem = ({avatar, link, value}) => {
           <ul className='joke-item'>
             <li className='img-cont'><img src={avatar} alt="avatar" /></li>
             <li className='value-cont'><p>{value}</p></li>
-            <li className='link-cont'><a href={link}>Link</a></li>
+            <li className='link-cont'><a href={link} target="_blank">Link</a></li>
           </ul>
           <br />
         </div>

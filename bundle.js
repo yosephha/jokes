@@ -31615,7 +31615,7 @@ var JokeItem = function JokeItem(_ref) {
         { className: 'link-cont' },
         _react2.default.createElement(
           'a',
-          { href: link },
+          { href: link, target: '_blank' },
           'Link'
         )
       )
