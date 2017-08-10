@@ -6,7 +6,7 @@ class JokesIndex extends React.Component {
     super(props);
 
     this.state = {
-      search: "",
+      search: '',
       category: ''
     }
 
@@ -61,27 +61,38 @@ class JokesIndex extends React.Component {
       jokesArr = this.generateJokes();
     }
 
-
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className ="authForm">
-          <input type="text"
-            value={this.state.search}
-            onChange={this.update("search")}
-          />
-        <br />
-          <select
-            name=""
-            onChange={this.update('category')}
-            value={this.state.category}
-          >
-          <option value="x" disabled="true">-none-</option>
-            {
-              this.props.categories.map(category => (
-                <option key={category} value={category}>{category}</option>
-              ))
-            }
-          </select>
+        <form onSubmit={this.handleSubmit} className ="mainForm">
+          <div className = "search-field">
+            <label className='label' htmlFor="search" >Search</label>
+            <input type="text"
+              id="search"
+              value={this.state.search}
+              onChange={this.update("search")}
+              />
+          </div>
+          <br />
+
+          <div>
+            <label className='label' htmlFor="category" >Category</label>
+            <div className='dropDown'>
+              <select
+                name=""
+                id="category"
+                onChange={this.update('category')}
+                value={this.state.category}
+                >
+                <option value="">--none--</option>
+                {
+                  this.props.categories.map(category => (
+                    <option key={category} value={category}>{category}</option>
+                  ))
+                }
+              </select>
+            </div>
+
+          </div>
           <br/>
 
           <input type="submit"

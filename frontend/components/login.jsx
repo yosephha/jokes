@@ -39,8 +39,11 @@ class LogInForm extends React.Component {
   }
 
   validateInput(){
-    if(this.state.username != "")
-      this.validUserName = true;
+    if(this.state.username != "" &&
+      this.state.username.includes("@") &&
+      this.state.username.includes("."))
+        this.validUserName = true;
+
     if(this.state.password != "")
       this.validPassword = true;
   }
@@ -51,14 +54,19 @@ class LogInForm extends React.Component {
 
     if(this.state.error){
       if(!this.validUserName)
-        usernameMissing = "username can't be blank";
+        usernameMissing = "Please enter a valid email";
       if(!this.validPassword)
-        passwordMissing = "password can't be blank";
+        passwordMissing = "password can not be blank";
     }
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className ="authForm">
-          <div>{ usernameMissing }</div>
+        <h1 className='wellcome'>
+          {'Wellcome! please login to continue!'}
+        </h1>
+        <form onSubmit={this.handleSubmit} className ="loginForm">
+          <div className ='invalidInput'>
+            { usernameMissing || '\u00A0'}
+          </div>
           <input type="text"
   					value={this.state.username}
   					onChange={this.update("username")}
@@ -66,7 +74,9 @@ class LogInForm extends React.Component {
   					/>
   				<br />
 
-          <div>{ passwordMissing }</div>
+          <div className ='invalidInput'>
+            { passwordMissing || '\u00A0' }
+          </div>
   				<input type="password"
   					value={this.state.password}
   					onChange={this.update("password")}

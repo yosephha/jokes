@@ -13,7 +13,6 @@ const Protected = ({ component: Component, path, loggedIn }) => (
 );
 
 const mapStateToProps = state => {
-  debugger
   return {loggedIn: state.user.currentUser};
 };
 
