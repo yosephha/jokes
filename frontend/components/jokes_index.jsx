@@ -84,6 +84,7 @@ class JokesIndex extends React.Component {
               id="search"
               value={this.state.search}
               onChange={this.update("search")}
+              autoFocus={true}
               />
           </div>
           <br />

@@ -71,6 +71,7 @@ class LogInForm extends React.Component {
   					value={this.state.username}
   					onChange={this.update("username")}
   					placeholder="Username"
+            autoFocus={true}
   					/>
   				<br />
 

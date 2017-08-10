@@ -31319,7 +31319,8 @@ var LogInForm = function (_React$Component) {
           _react2.default.createElement('input', { type: 'text',
             value: this.state.username,
             onChange: this.update("username"),
-            placeholder: 'Username'
+            placeholder: 'Username',
+            autoFocus: true
           }),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
@@ -31519,7 +31520,8 @@ var JokesIndex = function (_React$Component) {
             _react2.default.createElement('input', { type: 'text',
               id: 'search',
               value: this.state.search,
-              onChange: this.update("search")
+              onChange: this.update("search"),
+              autoFocus: true
             })
           ),
           _react2.default.createElement('br', null),
