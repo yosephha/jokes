@@ -5,6 +5,7 @@ class JokesIndex extends React.Component {
   constructor(props){
     super(props);
 
+    this.resultFor = '';
     this.state = {
       search: '',
       category: ''
@@ -33,7 +34,16 @@ class JokesIndex extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.queryJokes(this.state.search);
+    this.props.queryJokes(this.state.search)
+    .then((res) => {
+      if(res.jokes.total === 0){
+        this.resultFor = 'Search result not found...';
+        this.setState({
+          search: ''
+        });
+      }
+    });
+
   }
 
   generateJokes(){
@@ -53,13 +63,18 @@ class JokesIndex extends React.Component {
   }
 
   render(){
-    if(!this.props.categories) return null;
     let jokesArr = [];
+
+    if(!this.props.categories) return null;
 
     if(this.props.jokes.result) {
       jokesArr = this.generateJokes();
     }
 
+    if(jokesArr.length >= 1){
+      this.resultFor = "Result for " + this.state.search;
+    }
+    debugger
     return (
       <div>
         <form onSubmit={this.handleSubmit} className ="mainForm">
@@ -102,8 +117,8 @@ class JokesIndex extends React.Component {
               />
           </div>
         </form>
-
         <ul>
+          <div className='label2'>{this.resultFor}</div>
           {jokesArr}
         </ul>
 

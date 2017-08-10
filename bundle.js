@@ -31306,7 +31306,7 @@ var LogInForm = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           { className: 'wellcome' },
-          'Wellcome! please login to continue!'
+          'Welcome! please login to continue!'
         ),
         _react2.default.createElement(
           'form',
@@ -31426,6 +31426,7 @@ var JokesIndex = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (JokesIndex.__proto__ || Object.getPrototypeOf(JokesIndex)).call(this, props));
 
+    _this.resultFor = '';
     _this.state = {
       search: '',
       category: ''
@@ -31462,8 +31463,17 @@ var JokesIndex = function (_React$Component) {
   }, {
     key: 'handleSubmit',
     value: function handleSubmit(e) {
+      var _this3 = this;
+
       e.preventDefault();
-      this.props.queryJokes(this.state.search);
+      this.props.queryJokes(this.state.search).then(function (res) {
+        if (res.jokes.total === 0) {
+          _this3.resultFor = 'Search result not found...';
+          _this3.setState({
+            search: ''
+          });
+        }
+      });
     }
   }, {
     key: 'generateJokes',
@@ -31480,13 +31490,18 @@ var JokesIndex = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      if (!this.props.categories) return null;
       var jokesArr = [];
+
+      if (!this.props.categories) return null;
 
       if (this.props.jokes.result) {
         jokesArr = this.generateJokes();
       }
 
+      if (jokesArr.length >= 1) {
+        this.resultFor = "Result for " + this.state.search;
+      }
+      debugger;
       return _react2.default.createElement(
         'div',
         null,
@@ -31555,6 +31570,11 @@ var JokesIndex = function (_React$Component) {
         _react2.default.createElement(
           'ul',
           null,
+          _react2.default.createElement(
+            'div',
+            { className: 'label2' },
+            this.resultFor
+          ),
           jokesArr
         )
       );

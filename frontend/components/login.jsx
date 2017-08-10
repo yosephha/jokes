@@ -61,7 +61,7 @@ class LogInForm extends React.Component {
     return (
       <div>
         <h1 className='wellcome'>
-          {'Wellcome! please login to continue!'}
+          {'Welcome! please login to continue!'}
         </h1>
         <form onSubmit={this.handleSubmit} className ="loginForm">
           <div className ='invalidInput'>

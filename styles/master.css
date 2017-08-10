@@ -112,6 +112,17 @@ input[type=password]:focus, input[type=text]:focus {
   color: #333;
 }
 
+.label2 {
+  width: 65%;
+  text-align: -webkit-center;
+  margin: auto;
+  font-size: 24px;
+  padding: 10px;
+  vertical-align: middle;
+  color: #c5c5c5;
+  margin-bottom: 2%;
+}
+
 .dropDown {
   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
   display: inline-block;
@@ -197,3 +208,5 @@ li.img-cont {
   margin: auto;
   text-align: -webkit-center;
 }
+
+@media (1084)
