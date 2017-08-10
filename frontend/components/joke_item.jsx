@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const JokeItem = ({avatar, link, value}) => {
   return (
-        <div>
-          <ul>
-            <li>{avatar}</li>
-            <li>{value}</li>
-            <li>{link}</li>
+        <div className='jokes-cont'>
+          <ul className='joke-item'>
+            <li className='img-cont'><img src={avatar} alt="avatar" /></li>
+            <li className='value-cont'><p>{value}</p></li>
+            <li className='link-cont'><a href={link}>Link</a></li>
           </ul>
           <br />
         </div>

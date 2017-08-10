@@ -74,7 +74,7 @@ class JokesIndex extends React.Component {
           </div>
           <br />
 
-          <div>
+          <div className='cat-div'>
             <label className='label' htmlFor="category" >Category</label>
             <div className='dropDown'>
               <select
@@ -86,7 +86,9 @@ class JokesIndex extends React.Component {
                 <option value="">--none--</option>
                 {
                   this.props.categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
+                    <option
+                      key={category} value={category} className='opt'>{category}
+                    </option>
                   ))
                 }
               </select>
@@ -95,9 +97,11 @@ class JokesIndex extends React.Component {
           </div>
           <br/>
 
-          <input type="submit"
-            value='SEARCH'
-          />
+          <div className='btn-div'>
+            <input
+              type="submit" value='GO!' className='go-btn'
+              />
+          </div>
         </form>
 
         <ul>

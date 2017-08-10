@@ -1,0 +1,191 @@
+html, body, header, nav, h1, h4, a,
+ul, h3, li, button, i, section, img,
+div, form, input, select, option, textarea, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+body{
+  background: #333;
+  font-family: Helvetica;
+}
+
+.loginForm > input[type=text], .loginForm > input[type=password] {
+  width: 80%;
+  padding: 11px 25px;
+  background: #e4e4e6;
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid #dcd9d9;
+  text-align: -webkit-left;
+
+}
+
+.loginForm > input[type=submit] {
+  width: 20%;
+  padding: 8px 25px;
+  background: #fffb8e;
+  color: #333;
+  margin: 30px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+form.loginForm {
+  width: 35%;
+  margin: auto;
+  margin-top: 7%;
+  margin-bottom: 10%;
+  text-align: center;
+  padding: 20px;
+  background: #5d5c5c
+}
+form.loginForm:hover {
+  border: 1px solid #fffb8e;
+}
+
+h1.wellcome {
+  font-family: fantasy;
+  text-align: center;
+  font-size: 34px;
+  margin-top: 5%;
+  color: #fffb8e;
+}
+
+.invalidInput {
+    color: #ff6e6e;
+}
+
+input[type=password]:focus, input[type=text]:focus {
+  border: 3px solid #fffb8e;
+}
+
+.mainForm{
+  background: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  border-radius: 50px;
+  padding: 20px;
+  margin-bottom: 5%;
+}
+
+.search-field > input[type=text] {
+  border: 1px solid black;
+  padding: 10px 33px;
+  background: #e4e4e6;
+  border-radius: 15px;
+  border: 1px solid #dcd9d9;
+}
+
+.search-field > input[type=text]:focus {
+  border: 1px solid #333;
+}
+
+.search-field, .cat-div, .btn-div {
+    margin: 10px;
+}
+
+.label {
+  font-size: 32px;
+  padding: 10px;
+  vertical-align: middle;
+  color: #333;
+}
+
+.dropDown {
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  display: inline-block;
+  height: 30px;
+  overflow: hidden;
+  width: 180px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 12px;
+  border: 1px solid black;
+  vertical-align: -webkit-baseline-middle;
+}
+
+select#category {
+  background: rgba(255, 255, 255, 0.37);
+  border: none;
+  font-size: 14px;
+  height: 29px;
+  padding: 5px;
+  width: 268px;
+}
+
+.cat-div {
+    vertical-align: -webkit-baseline-middle;
+}
+.opt{
+  text-align:center;
+}
+
+.go-btn {
+  vertical-align: middle;
+  color: yellow;
+  border: 2px solid black;
+  border-radius: 11px;
+  padding: 9px 55px;
+  background: #333;
+  font-size: 21px;
+  padding: 10px 33px;
+  border-radius: 15px;
+}
+
+.go-btn:hover {
+    color: #333;
+    background: yellow;
+    border: 2px dotted black;
+}
+
+.jokes-cont{
+  width: 70%;
+  margin: auto;
+}
+
+.joke-item{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid yellow;
+  padding: 16px;
+  border-radius: 33px;
+  background: #6b6a6a;
+  color: wheat;
+  font-size: 18px;
+}
+
+li.link-cont {
+  margin: auto;
+  width: 8%;
+  text-align: -webkit-center;
+}
+
+li.link-cont > a{
+  color: yellow;
+}
+
+li.value-cont {
+  width: 80%;
+  text-align: -webkit-left;
+}
+
+li.img-cont {
+  width: 12%;
+  margin: auto;
+  text-align: -webkit-center;
+}
