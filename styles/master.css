@@ -209,4 +209,97 @@ li.img-cont {
   text-align: -webkit-center;
 }
 
-@media (1084)
+@media screen and (max-width:1086px) {
+  .mainForm {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 5%;
+  }
+
+  .go-btn {
+    vertical-align: middle;
+    color: yellow;
+    border: 2px solid black;
+    background: #333;
+    font-size: 21px;
+    padding: 9px 92px;
+    border-radius: 15px;
+  }
+
+  .label {
+    font-size: 28px;
+    padding: 10px;
+    vertical-align: middle;
+    color: #333;
+    display: inline-block;
+    width: 18%;
+  }
+
+  .search-field > input[type=text] {
+    border: 1px solid black;
+    padding: 10px 33px;
+    background: #e4e4e6;
+    border-radius: 3px;
+    border: 1px solid #dcd9d9;
+    width: 50%;
+  }
+
+  select#category {
+    background: rgba(255, 255, 255, 0.37);
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .dropDown {
+    background: yellow;
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    width: 59%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 3px;
+    border: 1px solid black;
+    vertical-align: -webkit-baseline-middle;
+  }
+
+  .joke-item {
+    list-style-type: none;
+    display: block;
+    flex-wrap: wrap;
+    border: 1px solid yellow;
+    padding: 16px;
+    border-radius: 33px;
+    background: #6b6a6a;
+    color: wheat;
+    font-size: 19px;
+  }
+
+  .jokes-cont {
+    width: 92%;
+    margin: auto;
+  }
+
+  li.value-cont {
+    width: 75%;
+    text-align: -webkit-center;
+    margin: auto;
+  }
+
+  li.link-cont {
+    margin: auto;
+    width: 8%;
+    text-align: -webkit-center;
+    border-top: 1px solid yellow;
+    padding: 15px;
+  }
+}
