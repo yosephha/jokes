@@ -308,4 +308,8 @@ li.img-cont {
   form.loginForm {
     width: 90%;
   }
+  
+  .label {
+    font-size: 18px;
+  }
 }

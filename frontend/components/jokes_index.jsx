@@ -74,7 +74,7 @@ class JokesIndex extends React.Component {
     if(jokesArr.length >= 1){
       this.resultFor = "Result for " + this.state.search;
     }
-    debugger
+
     return (
       <div>
         <form onSubmit={this.handleSubmit} className ="mainForm">

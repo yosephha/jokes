@@ -31501,7 +31501,7 @@ var JokesIndex = function (_React$Component) {
       if (jokesArr.length >= 1) {
         this.resultFor = "Result for " + this.state.search;
       }
-      debugger;
+
       return _react2.default.createElement(
         'div',
         null,
