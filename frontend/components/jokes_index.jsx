@@ -52,7 +52,6 @@ class JokesIndex extends React.Component {
     );
   }
 
-
   render(){
     if(!this.props.categories) return null;
     let jokesArr = [];

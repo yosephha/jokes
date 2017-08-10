@@ -6,10 +6,7 @@ import { ProtectedRoute } from '../util/route';
 const App = () => {
   return (
     <section>
-      {
-        //<ProtectedRoute exact path='/' component={JokesIndex} />}
-      }
-      <Route exact path='/' component={JokesIndex} />
+      <ProtectedRoute exact path='/' component={JokesIndex} />
       <Route path='/login' component={LogInForm} />
     </section>
   );

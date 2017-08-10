@@ -40,6 +40,11 @@ body{
   text-align: center;
 }
 
+.loginForm > input[type=submit]:hover {
+  cursor: pointer;
+  background: yellow;
+}
+
 form.loginForm {
   width: 35%;
   margin: auto;
@@ -47,10 +52,11 @@ form.loginForm {
   margin-bottom: 10%;
   text-align: center;
   padding: 20px;
-  background: #5d5c5c
+  background: #5d5c5c;
+  border: 1px solid #5d5c5c;
 }
 form.loginForm:hover {
-  border: 1px solid #fffb8e;
+  border: 1px solid yellow;
 }
 
 h1.wellcome {
@@ -66,7 +72,7 @@ h1.wellcome {
 }
 
 input[type=password]:focus, input[type=text]:focus {
-  border: 3px solid #fffb8e;
+  border: 3px solid yellow;
 }
 
 .mainForm{
@@ -150,6 +156,7 @@ select#category {
     color: #333;
     background: yellow;
     border: 2px dotted black;
+    cursor: pointer;
 }
 
 .jokes-cont{
